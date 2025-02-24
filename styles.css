@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color-1: rgb(79, 129, 255);
+    --background-color-2: rgb(201, 230, 255);
+    --para-color: rgb(112, 112, 112);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template: 1fr 2fr 16fr / 1fr 4fr;
+
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+p {
+    color: var(--para-color);
+}
+
+img {
+    padding-right: 1rem;
+}
+
+.profile-picture {
+    border-radius: 50%;
+}
+
+.sidebar {
+    background-color: var(--background-color-1);
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0.5rem 4rem;
+    font-weight: 500;
+}
+
+.logo a {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+header, header > div, .taskbar, .taskbar > div, a {
+    display: flex;
+    align-items: center;
+}
+
+header, .taskbar {
+    background-color: white;
+    padding: 0 2rem;
+    justify-content: space-between;
+}
+
+.projects > div, .announcements, .trending {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(178, 178, 178);
+}
+
+.taskbar {
+    box-shadow: 0 2px 3px rgb(178, 178, 178);
+    z-index: 2;
+}
+
+.left {
+    width: 70%;
+}
+
+.right {
+    gap: 1rem;
+}
+
+input {
+    background-color: var(--background-color-2);
+    border: none;
+    border-radius: 25px;
+    width: 80%;
+    height: 25px;
+    padding-left: 1ch;
+}
+
+button {
+    color: white;
+    background-color: var(--background-color-1);
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+main {
+    background-color: var(--background-color-2);
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+}
+
+main > div {
+    padding: 1rem;
+}
+
+.projects-container {
+    grid-row: 1 / 3;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.projects > div {
+    background-color: white;
+    padding: 2rem;
+    height: 10rem;
+    position: relative;
+    border-left: 10px solid rgb(255, 204, 0)
+}
+
+.project-6 {
+    word-wrap: break-word;
+}
+
+.buttons {
+    position: absolute;
+    right: 1rem;
+    bottom: 2rem;
+}
+
+.announcements, .trending {
+    background-color: white;
+    padding: 2rem;
+}
+
+.trending a {
+    margin: 1rem 0;
+}
+
+.message {
+    padding: 1rem 0;
+}
+
+.message:first-child {
+    border-bottom: 2px solid var(--para-color);
+}
+
+.message:last-child {
+    border-top: 2px solid var(--para-color);
+}
